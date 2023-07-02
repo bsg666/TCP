@@ -71,7 +71,6 @@ void TCPSender::fill_window() {
 
 //! \param ackno The remote receiver's ackno (acknowledgment number)
 //! \param window_size The remote receiver's advertised window size
-// 从 tcp_receiver 中获取
 int TCPSender::ack_received(const WrappingInt32 ackno, const uint16_t window_size) {
     if (!_syn_sent) {
         return -1;
